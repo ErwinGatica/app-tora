@@ -1,12 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Articles</h1>
+<h1>Artículos</h1>
 
 <div id="articles">
   <% @articles.each do |article| %>
-    <%= render article %>
+    <%= article.title %>
     <p>
-      <%= link_to "Show this article", article %>
+      <%= link_to "Ver", article %>
     </p>
   <% end %>
 </div>

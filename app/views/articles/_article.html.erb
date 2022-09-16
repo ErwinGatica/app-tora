@@ -1,17 +1,10 @@
 <div id="<%= dom_id article %>">
-  <p>
-    <strong>Title:</strong>
-    <%= article.title %>
-  </p>
+  <h1>
+    <% article.title %>
+  </h1>
 
-  <p>
-    <strong>Body:</strong>
-    <%= article.body %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= article.user_id %>
+  <p style="justify">
+    <%= simple_format article.body %>
   </p>
 
 </div>

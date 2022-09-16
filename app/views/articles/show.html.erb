@@ -1,7 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
+<h1>
+  <center> <%= @article.title%> </center>
+</h1>
+
+<% unless @article.photo.key.nil?%>
+  <%= cl_image_tag @article.photo.key, class: "card-trip" %>
+<% end%>
+
 <%= render @article %>
-<%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
 
 
 <div>
