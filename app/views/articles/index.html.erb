@@ -1,4 +1,6 @@
 <p style="color: green"><%= notice %></p>
+<%= link_to "Escribir nuevo artículo", new_article_path %>
+<p><%= @articles.count %> artículos escritos </p>
 
 <h1>Artículos</h1>
 
@@ -11,4 +13,4 @@
   <% end %>
 </div>
 
-<%= link_to "New article", new_article_path %>
+<%= link_to "Atrás", root_path %>

@@ -1,5 +1,23 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[ show edit update destroy ]
+  skip_before_action :authenticate_user!
+
+  def home
+
+  end
+
+  def orjot
+    @articles = Article.where("title like ?", "%Orjot%").order(title: :asc)
+  end
+
+  def educacion
+    @articles = Article.where("title like ?", "%Educación%").order(title: :asc)
+  end
+
+  def hablarbien
+    @articles = Article.where("title like ?", "%Hablar%").order(title: :asc)
+  end
+
 
   # GET /articles or /articles.json
   def index

@@ -1,0 +1,10 @@
+<center><h1>Hablar bien, vivir bien</h1> </center>
+
+<% @articles.each do |article| %>
+    <%= article.title %>
+    <p>
+      <%= link_to "Ver", article %>
+    </p>
+  <% end %>
+
+<%= link_to "Atrás", root_path %>
